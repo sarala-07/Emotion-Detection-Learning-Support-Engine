@@ -61,3 +61,11 @@ history = model.fit(
 model.save(os.path.join(MODELS_DIR, "bilstm_model.keras"))
 
 print("\n✅ BiLSTM Training Completed Successfully!")
+import pickle
+
+history_path = os.path.join(BASE_DIR, "models", "training_history.pkl")
+
+with open(history_path, "wb") as f:
+    pickle.dump(history.history, f)
+
+print("✅ Training history saved successfully!")
