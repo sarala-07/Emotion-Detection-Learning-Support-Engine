@@ -23,3 +23,5 @@ logs/
 
 # Temporary files
 *.log
+models/distilbert_model/
+results/
